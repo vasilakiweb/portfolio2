@@ -1,0 +1,18 @@
+// # Header
+// ===== Navigation =====
+.navigation {
+    margin-top: 35px;
+    display: flex;
+    align-items: center;
+    &__item {
+        @include font-sw (13px, 700);
+        text-transform: uppercase;
+        margin: 0 35px;
+        color: $navigationItemsColor;
+        letter-spacing: 2.6px;
+        transition: color 0.3s;
+        &:hover {
+            color: #64c29e;
+        }
+    }
+}

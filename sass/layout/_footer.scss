@@ -1,0 +1,37 @@
+// # Footer
+
+// ===== Footer =====
+.footer {
+    padding: 100px 0;
+    background-color: #f7f7f7;
+    &--flex {
+        display: flex;
+        align-items: center;
+        max-width: 964px;
+        padding: 0 40px;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+    &__info {
+        color: #848789;
+        line-height: 17.87px;
+        max-width: 236px;
+    }
+    &__span {
+        @include font-sw (16px, 700);
+    }
+    &__social-media {
+        text-align: center;
+    }
+    &__icon {
+        margin: 0 5px;
+    }
+    &__coopyright {
+        display: flex;
+        align-items: center;
+    }
+    &__coopyright-text {
+        margin-right: 10px;
+    }
+
+}

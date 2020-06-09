@@ -1,0 +1,290 @@
+// ===== All sections =====
+.title {
+    @include font-sw (18px, 700);
+    color: $titleColor;
+    text-transform: uppercase;
+    letter-spacing: 3.6px;
+    margin-top: 30px;
+}
+.description {
+    @include font-sw (18px, 400);
+    color: $descriptionColor;
+    line-height: 34px;
+    margin-top: 26px;
+    padding: 0 50px;
+}
+
+// ===== Banner =====
+.banner {
+    height: 800px;
+    background-image: url(images/banner-bg.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #464646;
+    &--flex {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+// ===== About =====
+.about {
+    padding: 115px 0 140px 0;
+    background-color: $silverBgColor;
+    &--flex {
+        text-align: center;
+    }
+    &__description {
+        max-width: 1040px;
+        padding: 0 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+// ===== Models =====
+.models {
+    &__logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+// Vintage
+.models {
+    &__vintage {
+        display: flex;
+        min-height: 600px;
+    }
+    &__vintage-left {
+        flex: 0 1 66.667%;
+        overflow: hidden;
+        position: relative;
+    }
+    &__vintage-right {
+        flex: 0 1 33.333%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &-text {
+            background-color: #fff;
+            padding: 70px 0 100px 0;
+        }
+    }
+    
+}
+.vintage__bicycle-2 {
+    width: 100%;
+    justify-self: flex-end;
+}
+.vintage__bicycle-1 {
+    height: 100%;
+    @media (min-width: 1726px) {
+        width: 100%;
+    }
+}
+// Boriosa
+.models {
+    &__boriosa {
+        display: flex;
+        min-height: 600px; 
+        text-align: center;
+        &-left {
+            flex: 0 1 33.333%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        &-right {
+            flex: 0 1 66.667%;
+            overflow: hidden;
+            position: relative;
+        }
+        &-text {
+            padding: 70px 0 100px 0;
+            background-color: #fff;
+        }
+    }
+}
+.boriosa-bicycle-1 {
+    width: 100%;
+}
+.boriosa-bicycle-2 {
+    height: 100%;
+}
+// Retro
+.models {
+    background-color: #282f35;
+    &__retro {
+        display: flex;
+        min-height: 600px; 
+        text-align: center;
+        &-left, &-center, &-right {
+            flex: 0 1 33.333%;
+        }
+        &-left {
+            overflow: hidden;
+            position: relative;
+        }
+        &-center {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        &-right {
+            overflow: hidden;
+            
+        }
+        &-text {
+            padding: 70px 0 100px 0;
+            background-color: #fff;
+        }
+    }
+}
+.retro-bicycle-1 {
+    height: 100%;
+}
+.retro-bicycle-2 {
+    width: 100%;
+}
+.retro-bicycle-3 {
+    width: 100%;
+    height: 100%;
+}
+
+// ===== Social media =====
+
+.media {
+    padding: 120px 40px 65px 40px;
+    text-align: center;
+    background-color: $silverBgColor;
+    &__description {
+        padding: 0;
+        max-width: 1135px;
+        margin-left: auto;
+        margin-right: auto;
+    } 
+}
+
+// ===== Contacts =====
+.contacts {
+    padding: 110px 40px;
+    text-align: center;
+    &__title {
+        margin-top: 35px;
+        color: #848789;
+        font-size: 24px;
+        line-height: 34px;
+    }
+    &__input {
+        margin-top: 35px;
+        width: 400px;
+        padding: 26px 0;
+        border: 1px solid #d3d7d9;
+        font-size: 20px;
+        line-height: 24px;
+        text-indent: 25px;
+    }
+    &__button {
+        @include font-sw (24px, 100);
+        background-color: #64c29e;
+        border: none;
+        color: #fff;
+        width: 126px;
+        padding: 26px 0;
+        cursor: pointer;
+    }
+}
+
+
+// ===== Media Queryes =====
+@media only screen and (max-width: 1023px) {
+    .models__vintage {
+        flex-direction: column;
+    }
+    .vintage__bicycle-2 {
+        display: none;
+    }
+    .models__boriosa {
+        flex-direction: column;
+        &-left {
+            order: 2;
+        }
+        &-right {
+            order: 1;
+        }
+    }
+    .boriosa-bicycle-1 {
+        display: none;
+    }
+    .models__retro-left, .models__retro-center {
+        flex: 0 1 50%;
+    }
+    .models__retro-right {
+        display: none;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .retro-bicycle-2 {
+        display: none;
+    }
+    .models__retro {
+        flex-direction: column;
+    }
+    .retro-bicycle-1 {
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 611px) {
+    .contacts__button {
+        margin-top: 30px;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .contacts__input {
+        max-width: 300px;
+    }
+    .navigation__item {
+        display: none;
+        &--logo {
+            display: block;
+        }
+    }
+    .footer--flex {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer__box {
+        margin-bottom: 30px;
+    }
+    .footer {
+        padding-top: 60px;
+        padding-bottom: 30px;
+    }
+    .about, .models__vintage-right-text, .models__boriosa-text,.models__retro-text {
+        padding: 60px 0;
+    }
+    .media {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .contacts {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    
+}            
+@media only screen and (max-width: 424px) {
+    .contacts__input {
+        width: 200px;
+        padding: 14px 0;
+        border: 1px solid #d3d7d9;
+        font-size: 14px;
+    }
+    .title, .description  {
+        font-size: 14px;
+    }
+}
